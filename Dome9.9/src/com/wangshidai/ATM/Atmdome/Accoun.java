@@ -1,7 +1,7 @@
 package com.wangshidai.ATM.Atmdome;
 
 public class Accoun {
-    private int id;
+    private String id;
     private String name;
     private int password;
     private int password1;
@@ -10,7 +10,7 @@ public class Accoun {
     public Accoun() {
     }
 
-    public Accoun(int id, String name, int password, int password1, double money) {
+    public Accoun(String id, String name, int password, int password1, double money) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -18,11 +18,11 @@ public class Accoun {
         this.money = money;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
