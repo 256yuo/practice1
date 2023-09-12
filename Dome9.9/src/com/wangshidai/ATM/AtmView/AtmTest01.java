@@ -3,6 +3,7 @@ import com.wangshidai.ATM.AtmUtil.UtilAtm;
 import com.wangshidai.ATM.Atmdome.Accoun;
 import com.wangshidai.ATM.Atmsever.SeverAtm;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AtmTest01 {
@@ -13,7 +14,14 @@ public class AtmTest01 {
         while (true) {
             UtilAtm.atm();
             System.out.println("\t1:登录\t2:开户\t3.关闭");
-            int num = an.nextInt();
+            int num=0;
+            try {
+                num = an.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println("输入的非整数");
+                //清除输入缓存
+                an.nextLine();
+            }
             if (num == 1) {
                 String id=UtilAtm.id();
                 int password=UtilAtm.password();

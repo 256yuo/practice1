@@ -63,7 +63,7 @@ public class SeverAtm {
     //存款
     public boolean deposit(int index,double money){
         Accoun str1=accouns.get(index);
-        if (!(money>=0)) {
+        if (money<0) {
             return false;
         }
         str1.setMoney(str1.getMoney() + money);
